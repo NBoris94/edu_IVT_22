@@ -1,3 +1,7 @@
-.text {
-    color: #00ff00;
+.cities__link {
+  color: #ff0000;
+}
+
+.header__navigation {
+  background-color: #eeeeee;
 }

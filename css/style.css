@@ -1,7 +1,60 @@
-.cities__link {
-  color: #ff0000;
+@font-face {
+  font-family: 'Futura PT Book';
+  src: url('../assets/fonts/FuturaPT-Book.woff2') format('woff2'),
+    url('../assets/fonts/FuturaPT-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-.header__navigation {
-  background-color: #eeeeee;
+@font-face {
+  font-family: 'Futura PT Heavy';
+  src: url('../assets/fonts/FuturaPT-Heavy.woff2') format('woff2'),
+    url('../assets/fonts/FuturaPT-Heavy.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --text-color: #111111;
+  --primary-color: #007198;
+  --ui-color: #F47220;
+  --bg-color: #ffffff;
+  --section-color: #DAF1F9;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  font-family: 'Futura PT Book', Arial, sans-serif;
+}
+
+.h1 {
+  font-family: 'Futura PT Heavy', Arial, sans-serif;
+  font-size: 3.125rem;
+  line-height: 120%;
+  color: var(--text-color);
+}
+
+.h2 {
+  font-family: 'Futura PT Heavy', Arial, sans-serif;
+  font-size: 1.875rem;
+  line-height: 120%;
+  color: var(--text-color);
+}
+
+.h3 {
+  font-family: 'Futura PT Heavy', Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 120%;
+  color: var(--text-color);
+}
+
+.text {
+  font-size: 1.125rem;
+  line-height: 120%;
+  color: var(--text-color);
 }

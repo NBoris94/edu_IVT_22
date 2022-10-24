@@ -49,6 +49,13 @@ img {
   height: auto;
 }
 
+.list-reset {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .h1 {
   font-family: 'Futura PT Heavy', Arial, sans-serif;
   font-size: 3.125rem;
@@ -105,7 +112,131 @@ img {
   background-color: var(--ui-color);
 }
 
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.caret {
+  position: relative;
+  width: 6.6px;
+  height: 1px;
+  margin-left: 2px;
+  margin-top: -2px;
+}
+
+.caret::before,
+.caret::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 5px;
+  height: 100%;
+  background-color: #888888;
+}
+
+.caret::before {
+  left: 0;
+  transform-origin: left center;
+  transform: rotate(45deg);
+}
+
+.caret::after {
+  right: 0;
+  transform-origin: right center;
+  transform: rotate(-45deg);
+}
+
 .header {}
+
+.header__row {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.header__logo {
+  flex-shrink: 0;
+}
+
+.header__cities {
+  margin-left: auto;
+}
+
+.header__social {
+  margin-left: 70px;
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.header__contacts a {
+  font-family: 'Futura PT Heavy', Arial, sans-serif;
+  font-size: 1.125rem;
+  color: var(--primary-color);
+}
+
+.header__contacts p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.header__call {
+  margin-left: 50px;
+}
+
+.change-city {
+  position: relative;
+}
+
+.change-city__open {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  font-size: 0.75rem;
+}
+
+.cities {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 19px;
+}
+
+.social li {
+  margin-right: 20px;
+}
+
+.social li:last-child {
+  margin-right: 0;
+}
+
+.social__link svg {
+  fill: var(--text-color);
+}
+
+.social__link:hover svg {
+  fill: var(--primary-color);
+}
 
 .service-card {
   position: relative;

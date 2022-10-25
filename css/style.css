@@ -18,6 +18,7 @@
 
 :root {
   --text-color: #111111;
+  --text-color-hover: #888888;
   --primary-color: #007198;
   --ui-color: #F47220;
   --bg-color: #ffffff;
@@ -57,6 +58,7 @@ img {
 }
 
 .h1 {
+  margin: 0;
   font-family: 'Futura PT Heavy', Arial, sans-serif;
   font-size: 3.125rem;
   line-height: 120%;
@@ -64,6 +66,7 @@ img {
 }
 
 .h2 {
+  margin: 0;
   font-family: 'Futura PT Heavy', Arial, sans-serif;
   font-size: 1.875rem;
   line-height: 120%;
@@ -71,6 +74,7 @@ img {
 }
 
 .h3 {
+  margin: 0;
   font-family: 'Futura PT Heavy', Arial, sans-serif;
   font-size: 1.125rem;
   line-height: 120%;
@@ -83,7 +87,12 @@ img {
   color: var(--text-color);
 }
 
+.text-primary {
+  color: var(--primary-color);
+}
+
 .btn {
+  display: inline-block;
   padding: 5px 13px;
   border: 1px solid var(--ui-color);
   font-size: 0.875rem;
@@ -112,6 +121,10 @@ img {
   background-color: var(--ui-color);
 }
 
+.btn_lg {
+  padding: 13px 21px;
+}
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -121,6 +134,7 @@ img {
 
 .caret {
   position: relative;
+  display: block;
   width: 6.6px;
   height: 1px;
   margin-left: 2px;
@@ -193,6 +207,16 @@ img {
   margin-left: 50px;
 }
 
+.header__navigation {
+  padding: 11px 0;
+}
+
+.header__divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-color-hover);
+}
+
 .change-city {
   position: relative;
 }
@@ -236,6 +260,56 @@ img {
 
 .social__link:hover svg {
   fill: var(--primary-color);
+}
+
+.nav__btn {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 130%;
+  color: var(--text-color);
+}
+
+.menu__link:hover,
+.menu__link_active {
+  color: var(--text-color-hover);
+}
+
+.submenu {
+  display: none;
+}
+
+.section {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+
+.section__title {
+  margin-top: 0;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.first-screen {
+  padding-top: 45px;
+  background-color: var(--section-color);
+}
+
+.first-screen__title {
+  max-width: 516px;
+  width: 100%;
+  margin-top: 19px;
+  margin-bottom: 40px;
 }
 
 .service-card {
@@ -282,4 +356,34 @@ img {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 44.09%, rgba(255, 255, 255, 0.66) 93.06%);
+}
+
+.benefit-card {
+  position: relative;
+  width: 275px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--section-color);
+  box-shadow: 3px 3px 5px rgba(17, 17, 17, 0.25);
+}
+
+.benefit-card__title {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.benefit-card__icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -46px;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  transform: translateX(-50%);
+  background-color: var(--section-color);
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px rgba(17, 17, 17, 0.25);
 }

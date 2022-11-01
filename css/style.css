@@ -132,6 +132,14 @@ img {
   margin: 0 auto;
 }
 
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+}
+
+.col {}
+
 .caret {
   position: relative;
   display: block;
@@ -312,6 +320,12 @@ img {
   margin-bottom: 40px;
 }
 
+.first-screen__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
 .service-card {
   position: relative;
   width: 270px;
@@ -358,6 +372,12 @@ img {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 44.09%, rgba(255, 255, 255, 0.66) 93.06%);
 }
 
+.benefits__cards {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 46px;
+}
+
 .benefit-card {
   position: relative;
   width: 275px;
@@ -370,6 +390,11 @@ img {
 .benefit-card__title {
   margin-top: 20px;
   text-align: center;
+}
+
+.benefit-card__text {
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
 .benefit-card__icon {
@@ -386,4 +411,41 @@ img {
   border: 1px solid #FFFFFF;
   border-radius: 50%;
   box-shadow: 3px 3px 5px rgba(17, 17, 17, 0.25);
+}
+
+.popular__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+.popular-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popular-card__title {
+  order: 2;
+  margin-top: 10px;
+}
+
+.popular-card__image {
+  order: 1;
+}
+
+.popular-card__price {
+  order: 3;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Futura PT Heavy', Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 120%;
+  color: var(--ui-color);
+
+}
+
+.popular-card__more {
+  order: 4;
 }

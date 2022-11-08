@@ -68,7 +68,7 @@
             Мы на связи с <time datetime="09:00">9:00</time> до <time datetime="19:00">19:00</time>
           </p>
         </div>
-        <button class="header__call btn" type="button">Заказать звонок</button>
+        <button class="header__call btn" type="button" id="call-request">Заказать звонок</button>
       </div>
     </div>
     <div class="header__divider"></div>
@@ -400,6 +400,49 @@
     </ul>
     <address>Москва, Мартеновская, 24-23</address>
   </footer>
+
+  <div class="dialog" id="call-request-dialog">
+    <div class="dialog__overlay" id="call-request-overlay"></div>
+    <div class="dialog__content">
+      <button class="dialog__close" id="call-request-close">
+        <span></span>
+      </button>
+
+      <h3 class="dialog__title h3">Обратный звонок</h3>
+
+      <form class="form" action="">
+        <fieldset class="form__group">
+          <legend class="form__legend">Имя</legend>
+          <input class="form__input" type="text" name="name" placeholder="Имя">
+        </fieldset>
+        <fieldset class="form__group">
+          <legend class="form__legend">Телефон</legend>
+          <input class="form__input" type="tel" name="phone" placeholder="Телефон">
+        </fieldset>
+        <fieldset class="form__group">
+          <legend class="form__legend">Test</legend>
+          <div class="form__radio">
+            <input type="radio" name="fruits" value="Яблоко" id="apple">
+            <label for="apple">Яблоко</label>
+          </div>
+
+          <div class="form__radio">
+            <input type="radio" name="fruits" value="Яблоко2" id="apple2" checked>
+            <label for="apple2">Яблоко2</label>
+          </div>
+
+          <div class="form__checkbox">
+            <input type="checkbox" name="fruits2" value="Ананас" id="pineapple">
+            <label for="pineapple">Ананас</label>
+          </div>
+        </fieldset>
+        <button class="form__submit btn" type="submit">Отправить</button>
+        <p class="form__caption">Нажимая на кнопку, вы подтверждаете, что ознакомились с политикой конфиденциальности и даете согласие на обработку своих персональных данных</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
 </body>
 
 </html>
